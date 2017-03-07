@@ -9,7 +9,32 @@
 extension Hero {
     
     func rarityOfItems(inventory: [UDItem]) -> [UDItemRarity:Int] {
-        return [UDItemRarity:Int]()
+        
+        var items = [UDItemRarity:Int]()
+        var commonNum = 0;
+        var uncommonNum = 0
+        var rareNum = 0
+        var legendaryNum = 0
+        
+        for item in inventory {
+            switch item.rarity {
+            case .common:
+                commonNum += 1
+            case .uncommon:
+                uncommonNum += 1
+            case .rare:
+                rareNum += 1
+            case .legendary:
+                legendaryNum += 1
+            }
+        }
+
+        items[UDItemRarity.common] = commonNum
+        items[UDItemRarity.uncommon] = uncommonNum
+        items[UDItemRarity.rare] = rareNum
+        items[UDItemRarity.legendary] = legendaryNum
+        
+        return items
     }
 }
 
