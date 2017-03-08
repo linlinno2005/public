@@ -105,7 +105,7 @@ protocol PenaltyCell {
 struct Mine: PenaltyCell {
     let location: GridLocation
     var guaranteesHit: Bool = false
-    var penaltyText: String = ""
+    var penaltyText: String = "Boom!"
     
     init(location:GridLocation,penaltyText:String) {
         self.location = location
@@ -123,7 +123,7 @@ struct Mine: PenaltyCell {
 struct SeaMonster: PenaltyCell {
     let location: GridLocation
     let guaranteesHit: Bool = true
-    let penaltyText: String = ""
+    let penaltyText: String = "Whoa Nessia!"
 }
 
 class ControlCenter {
@@ -134,7 +134,7 @@ class ControlCenter {
         
         human.addShipToGrid(smallShip)
         
-        let mediumShip1 = Ship(length: 3, location: GridLocation(x: 0, y: 0), isVertical: false, isWooden: false)
+        let mediumShip1 = Ship(length: 3, location: GridLocation(x: 0, y: 0), isVertical: false)
         human.addShipToGrid(mediumShip1)
         
         let mediumShip2 = Ship(length: 3, location: GridLocation(x: 3, y: 1), isVertical: false, isWooden: false)
@@ -149,10 +149,10 @@ class ControlCenter {
         let xLargeShip = Ship(length: 5, location: GridLocation(x: 7, y: 2), isVertical: true, isWooden: false)
         human.addShipToGrid(xLargeShip)
         
-        let mine1 = Mine(location: GridLocation(x: 6, y: 0),penaltyText: "special mine", guaranteesHit: true)
+        let mine1 = Mine(location: GridLocation(x: 6, y: 0),penaltyText: "Special Mine", guaranteesHit: true)
         human.addMineToGrid(mine1)
         
-        let mine2 = Mine(location: GridLocation(x: 3, y: 3), penaltyText: "normal mine",guaranteesHit: false)
+        let mine2 = Mine(location: GridLocation(x: 3, y: 3), penaltyText: "Normal mine")
         human.addMineToGrid(mine2)
         
         let seamonster1 = SeaMonster(location: GridLocation(x: 5, y: 6))
