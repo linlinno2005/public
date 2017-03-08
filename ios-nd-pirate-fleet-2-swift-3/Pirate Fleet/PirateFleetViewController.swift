@@ -165,7 +165,6 @@ extension PirateFleetViewController: PlayerDelegate {
             
 // TODO:Uncomment once PenaltyCell protocol has been implemented
             
-            //print("~~~~~~~~~~~~lalallalalalal")
             if penaltyCell.guaranteesHit {
                 //print("~~~guaranteesHit")
                 attackedPlayer.availableMoves.append(.guaranteedHit)

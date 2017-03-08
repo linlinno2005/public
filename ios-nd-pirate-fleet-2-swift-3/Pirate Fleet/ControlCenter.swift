@@ -142,9 +142,7 @@ class ControlCenter {
         
         let largeShip = Ship(length: 4, location: GridLocation(x: 6, y: 3), isVertical: true, isWooden: true)
         
-//        print("@@@@@@@@@@@@@@@@@@@@")
 //        print(largeShip.cells)
-//        print("!!!!!!!!!!!!!!!!!!!!")
         
         human.addShipToGrid(largeShip)
         
