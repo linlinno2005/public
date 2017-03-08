@@ -152,7 +152,7 @@ class ControlCenter {
         let mine1 = Mine(location: GridLocation(x: 6, y: 0),penaltyText: "Special Mine", guaranteesHit: true)
         human.addMineToGrid(mine1)
         
-        let mine2 = Mine(location: GridLocation(x: 3, y: 3), penaltyText: "Normal mine")
+        let mine2 = Mine(location: GridLocation(x: 3, y: 3), penaltyText: "Normal Mine")
         human.addMineToGrid(mine2)
         
         let seamonster1 = SeaMonster(location: GridLocation(x: 5, y: 6))
