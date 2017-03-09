@@ -45,7 +45,7 @@ class SettingsViewController: UIViewController {
         //print("adding targets!")
         
         startGameButton.addTarget(self, action: #selector(SettingsViewController.startGame), for: .touchUpInside)
-        showBadgesSwitch.addTarget(self, action: #selector(SettingsViewController.showBadges), for: .touchUpInside)
+        showBadgesSwitch.addTarget(self, action: #selector(SettingsViewController.showBadges), for: .valueChanged)
         levelSegmentedControl.addTarget(self, action: #selector(SettingsViewController.switchLevel), for: .valueChanged)
         
     }
